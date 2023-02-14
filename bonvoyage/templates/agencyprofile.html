@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+{% load static %}
+<head>
+    <style>
+    .nav-link{
+    color:bloack;
+    }
+
+         .btn-grad {
+            background-image: linear-gradient(to right, #314755 0%, #26a0da  51%, #314755  100%);
+            margin: 10px;
+            padding: 15px 45px;
+            text-align: center;
+            text-transform: uppercase;
+            transition: 0.5s;
+            background-size: 200% auto;
+            color: white;
+            box-shadow: 0 0 20px #eee;
+            border-radius: 10px;
+            display: block;
+          }
+
+          .btn-grad:hover {
+            background-position: right center; /* change the direction of the change here */
+            color: #fff;
+            text-decoration: none;
+          }
+
+    </style>
+    <script src="https://kit.fontawesome.com/466fb25592.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div class="container-fluid ">
+    <div class="row ">
+
+        <nav class="navbar navbar-expand-xl navbar-dark bg-dark">
+            <div class="container-fluid">
+
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                        aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href=""
+                               style="color: white;"><b>HOME</b></a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="http://127.0.0.1:8000/bonvoyage/aboutus/"
+                               style="color:white;"><b>ABOUT US</b></a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="http://127.0.0.1:8000/bonvoyage/contactus/"
+                               style="color:white;"><b>CONTACT US</b></a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="http://127.0.0.1:8000/bonvoyage/index/" style="color: white;"><b>LOGOUT</b></a>
+                        </li>
+                        <li>
+                            <button class="btn btn-dark" type="button" data-bs-toggle="offcanvas"
+                                    data-bs-target="#offcanvasRight" aria-controls="offcanvasRight"
+                                    style="margin-left: 900px;"><i class="fa-solid fa-bars"></i>
+                            </button>
+
+                            <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight"
+                                 aria-labelledby="offcanvasRightLabel">
+                                <div class="offcanvas-header">
+
+                                    <img src="{% static 'alogo.png' %}" width="350px" height="150px">
+                                    <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas"
+                                            aria-label="Close"></button>
+                                </div>
+                                <div class="offcanvas-body">
+                                     <h5 style="color:black;">{{agn}}</h5><br><br>
+                                    <a href="" class="btn"><i class="fa-solid fa-house" ></i> &nbsp;&nbsp;&nbsp;HOME </a><br><br>
+                                    <i class="fa-sharp fa-solid fa-building"></i><a href="http://127.0.0.1:8000/bonvoyage/aboutus/" class="btn">&nbsp;&nbsp;ABOUT US </a><br><br>
+
+                                    <a href="http://127.0.0.1:8000/bonvoyage/index/" class="btn"><i class="fa-solid fa-right-from-bracket"></i>&nbsp;&nbsp;&nbsp; LOGOUT </a><br><br>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </div>
+</div>
+<img src="https://static.vecteezy.com/system/resources/previews/006/862/352/original/illustration-of-travel-using-as-business-web-template-agency-free-vector.jpg" style="margin-left:20px;margin-top:20px;" width="1500px" height="650px">
+<div class="row" style="margin-top: 50px; margin-left: 25px;">
+  <div class="col-4">
+    <div class="card" style="width:300px;" >
+    <img src="https://content3.jdmagicbox.com/comp/bangalore/t6/080pxx80.xx80.180104180600.d8t6/catalogue/my-holiday-outings-telecom-layout-jakkur-bangalore-tour-packages-1dtkkc3wam.jpg" class="card-img-top" style="height:200px;width:220px;margin-left: 40px; margin-top: 15px;">
+
+        <a href="http://127.0.0.1:8000/bonvoyage/packagedisplay/" class="btn btn-grad"> CURRENT PACKAGES</a>
+     </div>
+    </div>
+
+  <div class="col-4">
+    <div class="card" style="width:300px;" >
+    <img src="https://i0.wp.com/networknuts.net/wp-content/uploads/2019/11/zahir-accounting-software-have-more-than-60.000-users.png" class="card-img-top" style="height:200px;width:220px;margin-left: 40px; margin-top: 15px;">
+
+        <a href="http://127.0.0.1:8000/bonvoyage/bookeduser/" class="btn btn-grad">BOOKED USERS</a>
+     </div>
+    </div>
+
+  <div class="col-4">
+    <div class="card" style="width:300px;" >
+    <img src="https://e7.pngegg.com/pngimages/187/201/png-clipart-upload-file-transfer-protocol-form-jquery-upload-button-miscellaneous-blue-thumbnail.png" class="card-img-top" style="height:200px;width:220px;margin-left: 40px; margin-top: 15px;">
+
+        <a href="http://127.0.0.1:8000/bonvoyage/uploadpackages/" class="btn btn-grad">UPLOAD PACKAGES</a>
+     </div>
+    </div>
+</div>
+
+<div>
+<footer class="text-center text-lg-start bg-dark " style="margin-top: 30px;">
+  <!-- Section: Social media -->
+  <section class="d-flex justify-content-center justify-content-lg-between p-4 border-bottom">
+    <!-- Left -->
+    <div class="me-5 d-none d-lg-block" style="color:white;">
+      <span>Get connected with us on social networks:</span>
+    </div>
+      <div>
+      <a href="" class="me-4 text-reset" style="color:white;">
+        <i id="icon" class="fa-brands fa-facebook"></i>
+      </a>
+      <a href="" class="me-4 text-reset" style="color:white;">
+        <i id="icon" class="fab fa-twitter"></i>
+      </a>
+      <a href="" class="me-4 text-reset" style="color:white;">
+        <i id="icon" class="fab fa-google"></i>
+      </a>
+      <a href="" class="me-4 text-reset" style="color:white;">
+        <i id="icon" class="fab fa-instagram"></i>
+      </a>
+      <a href="" class="me-4 text-reset" style="color:white;">
+        <i id="icon" class="fa-brands fa-whatsapp"></i>
+      </a>
+
+    </div>
+  </section>
+    <section class="section-footer">
+    <div class="container text-center text-md-start mt-5">
+      <!-- Grid row -->
+      <div class="row mt-3">
+        <!-- Grid column -->
+        <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4" style="color:white;">
+
+          <p>
+            Copyrightⓒ1995-2022 All Rights reserved.<br>
+          </p>
+        </div>
+      </div>
+    </div>
+    </section>
+</footer>
+</div>
+</body>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script src="https://kit.fontawesome.com/e0133b5663.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+            crossorigin="anonymous"></script>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<form method="post">{% csrf_token %}
+    {% for i in a %}
+    {% if i.agency == b %}
+    <div class="container">
+        <div class="card">
+            <div class="card-body">
+                <label>AGENCY NAME:{{i.agency}}</label><br>
+                <label>EMAIL:{{i.email}}</label><br>
+                <label>DESTINATION:{{i.destina}}</label><br>
+                <label>FOOD:{{i.food}}</label><br>
+                <label>PET:{{i.pet}}</label><br>
+                <label>DAYS AND NIGHT:{{i.duration}}</label><br>
+                <label>STAY:{{i.stay}}</label><br>
+                <label>RATE:{{i.rate}}</label><br>
+<!--                <a href="http://127.0.0.1:8000/bonvoyage/bookpackage/{{i.id}}" class="btn btn-success">BOOKNOW</a>-->
+                <a href="http://127.0.0.1:8000/bonvoyage/removewish/{{i.id}}" class="btn btn-danger">DELETE</a>
+            </div>
+        </div>
+
+    </div>
+    {% endif %}
+    {% endfor %}
+
+</form>
+</body>
+</html>

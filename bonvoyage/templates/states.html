@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script>
+        function myFunction()
+        {
+          var input, filter, table, tr, td, i, txtValue;
+          input = document.getElementById("myInput");
+          filter = input.value.toUpperCase();
+          table = document.getElementById("myTable");
+          tr = table.getElementsByTagName("tr");
+          for (i = 0; i < tr.length; i++)
+          {
+            td = (tr[i].getElementsByTagName("td")[0]);
+            if (td)
+            {
+              txtValue = td.textContent || td.innerText;
+              if (txtValue.toUpperCase().indexOf(filter) > -1)
+              {
+                tr[i].style.display = "";
+              }
+              else
+               {
+                tr[i].style.display = "none";
+              }
+            }
+          }
+        }
+    </script>
+    <script src="https://kit.fontawesome.com/e0133b5663.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+            crossorigin="anonymous"></script>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div class="container">
+<form method="post">{% csrf_token %}
+<center><h2 style="margin-top:30px;"><b>Main Destination Points</b></h2>
+    <input type="text" class="form-contrl" id="myInput" onkeyup="myFunction()" placeholder="search for destination" style="margin-bottom:30px;"></center>
+    <table id="myTable" border="2" style="text-left:center">
+        <tr class="header-xl" bgcolor="teal">
+            <th style="width:60%;">STATE</th>
+            <th style="width:40%;">DESTINATIONS</th>
+            <tr bgcolor="cyan">
+                <td>Kerala</td>
+                <td>Alappuzha || Jadayu Rock || Fort Kochi || Munnar || Periyar National Park</td>
+            </tr>
+            <tr>
+                <td>Tamilnadu</td>
+                <td>Kanyakumari || Ooty || Kodaikanal || Madhurai</td>
+            </tr>
+            <tr bgcolor="cyan">
+                <td>Karnataka</td>
+                <td>Nagarahole Tiger Reserve || Bengaluru || Jog Falls || Mysore Palace</td>
+            </tr>
+            <tr>
+                <td>Gujarath</td>
+                <td>Ahmedabad || Gir National Park || Surat || Vdodara || Kachchh</td>
+            </tr>
+            <tr bgcolor="cyan">
+                <td>Maharashtra</td>
+                <td>Mumbai || Pune || Lonavala || Nashik </td>
+            </tr>
+            <tr>
+                <td>Goa</td>
+                <td>Palolem Beach || Panaji || Vagator ||Agonda || Calangute || Morjim</td>
+            </tr>
+        <tr bgcolor="cyan">
+                <td>Himachal Pradesh</td>
+                <td>Shimla || Manali ||Dalhousie || Kasauli ||Kasol</td>
+            </tr>
+            <tr>
+                <td>Punjab</td>
+                <td>Amritsar || Ludhiana || Jalandhar || Patiala </td>
+            </tr>
+            <tr bgcolor="cyan">
+                <td>Rajasthan</td>
+                <td>Jaipur || Udaipur || Jodhpur || Jaisalmer ||Bikaner</td>
+            </tr>
+            <tr>
+                <td>Delhi</td>
+                <td>Taj Mahal || Lotus Temple || Siri Fort || India Gate</td>
+            </tr>
+            <tr bgcolor="cyan">
+                <td>Jammu and Kashmir</td>
+                <td>Gulmarg || Pahalgam || Dal Lake || Sonamarg || Katra</td>
+            </tr>
+            <tr>
+                <td>Uttarakhand</td>
+                <td>Rishikesh || Badrinath || Jim Corbet National Park || Dehradun || Kedarnath</td>
+            </tr>
+            <tr bgcolor="cyan">
+                <td>Manipur</td>
+                <td>Keibul Lamjo National Park || Kangla Fort || Loktak Lake</td>
+            </tr>
+            <tr>
+                <td>Assam</td>
+                <td>Kaziranga National Park || Kamakhya Temple || Manas National Park</td>
+            </tr>
+            <tr bgcolor="cyan">
+                <td>Andra Pradesh</td>
+                <td>Tirupari || Visakhapatanam || Vijayawada || Prakasam Barrage</td>
+            </tr>
+
+    </table>
+</form>
+</div>
+</body>
+</html>

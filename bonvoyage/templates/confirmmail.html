@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <script src="https://kit.fontawesome.com/e0133b5663.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+            crossorigin="anonymous"></script>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<center>
+  <h3 class="alert alert-success">THE CONFIRMATION MAIL HAS SENT...!!!</h3>
+  <form method="post">{% csrf_token%}
+    <div class="form-group">
+      <h3>{{ form.as_p }}</h3>
+      <img src="https://cdn.formidableforms.com/wp-content/uploads/2017/12/confirmation-emails-are-expected-by-customers.png" style="margin-top:50px;">
+    </div>
+  </form>
+</center>
+</body>
+</html>
